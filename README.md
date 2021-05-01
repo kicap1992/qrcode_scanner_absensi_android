@@ -1,6 +1,6 @@
 # barcode_absensi
 
-My First Flutter Project Using
+My First Flutter Project 
 
 # QRCode Absensi
 
