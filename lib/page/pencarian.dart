@@ -31,7 +31,7 @@ class _PencarianState extends State<Pencarian> {
 
   Future<List<Note>> fetchNotes() async {
     const url =
-        'http://192.168.43.125/barcode_absensi_admin/api_server/list_karyawan';
+        'https://barcode-absensi.kicap-karan.com/api_server/list_karyawan';
 
     try {
       final response = await http.get(Uri.parse(url));

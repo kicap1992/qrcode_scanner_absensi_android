@@ -12,7 +12,7 @@ class StatePetugas extends ChangeNotifier {
       // ignore: prefer_final_locals
       var uri = Uri.parse(
           // ignore: prefer_interpolation_to_compose_strings
-          "http://192.168.43.125/barcode_absensi_admin/api_server/login_petugas?username=" +
+          "https://barcode-absensi.kicap-karan.com/api_server/login_petugas?username=" +
               username +
               "&password=" +
               password);
@@ -46,7 +46,7 @@ class StatePetugas extends ChangeNotifier {
     try {
       final uri = Uri.parse(
           // ignore: prefer_interpolation_to_compose_strings
-          "http://192.168.43.125/barcode_absensi_admin/api_server/cek_karyawan_by_qrcode?nik=" +
+          "https://barcode-absensi.kicap-karan.com/api_server/cek_karyawan_by_qrcode?nik=" +
               qrcode);
       final SharedPreferences sharedPreferences =
           await SharedPreferences.getInstance();
@@ -81,7 +81,7 @@ class StatePetugas extends ChangeNotifier {
     try {
       final uri = Uri.parse(
           // ignore: prefer_interpolation_to_compose_strings
-          "http://192.168.43.125/barcode_absensi_admin/api_server/absensi_karyawan");
+          "https://barcode-absensi.kicap-karan.com/api_server/absensi_karyawan");
       final response = await http.post(
         uri,
         headers: <String, String>{

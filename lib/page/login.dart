@@ -100,14 +100,14 @@ class _LoginPageState extends State<LoginPage> {
         showDialog(
           context: context,
           builder: (BuildContext context) {
-            Future.delayed(const Duration(seconds: 2), () {
+            Future.delayed(const Duration(milliseconds: 2001), () {
               Navigator.of(context).pop(true);
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ScanQRCode(),
-                  ),
-                  (route) => false);
+              // Navigator.pushAndRemoveUntil(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => ScanQRCode(),
+              //     ),
+              //     (route) => false);
             });
             return const AlertDialog(
               title: Text("Sukses"),
@@ -115,6 +115,16 @@ class _LoginPageState extends State<LoginPage> {
             );
           },
         );
+
+        Future.delayed(const Duration(seconds: 3), () {
+          // Navigator.of(context).pop(true);
+          Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ScanQRCode(),
+              ),
+              (route) => false);
+        });
       } else {
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text(_returnString.toString())));
